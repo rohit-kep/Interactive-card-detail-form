@@ -1,0 +1,200 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 1440px;
+    min-height: 100vh;
+    position: relative;
+    background-image: url(./images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+#card1{
+    position:absolute;
+    left: 200px; 
+    top: 150px;
+    width:max-content;
+    height: max-content;
+    background-image: url('./images/bg-card-front.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    padding:20px 25px;
+    color: white;
+    box-shadow: 10px 20px 20px  rgba(31, 31, 31,.2);
+}
+#card1 img{
+    display: block;
+    width: 84px;
+    height: 47px;
+}
+.onthesame{
+    margin-top: 20px;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+#card1 #cardnumber{
+    margin-top: 50px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#card1 #cardname{   
+    font-size: 15px;
+}
+
+#cardBack{
+    position: absolute;
+    left: 270px;
+    bottom: 300px;
+    width: 447px;
+    height: 225px;
+    background-image: url('./images/bg-card-back.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 10px 20px 20px  rgba(31, 31, 31,.2  );
+}
+#cardBack #code{
+    margin-top: 110px;
+    float: right;
+    margin-right: 50px;
+    }
+
+
+    #container form{
+        width: 450px;
+        position: absolute;
+        right: calc(100% - 1300px);
+        top: 250px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 30px;
+        border-radius: 5px;
+    }
+     .child{
+        display: inline-block;
+        width: 100%;
+    }
+
+    .child label{
+        display: block;
+        margin-bottom: 5px;
+        width: 100%;
+        font-size: 15px;
+        font-family: monospace;
+    }
+    .child input[type="text"], .child input[type="number"], .child input[type="date"]{
+            appearance:none;
+            border:none;
+            outline: none;
+            width: 100%;
+            border: 1px solid rgb(23, 5, 73);
+            border-radius: 5px ;
+            padding: 8px ;
+            font-size: 20px;
+        }
+
+    .child p{
+        color: rgba(255, 11, 11, 0.904);
+        padding-top: 5px;
+        font-size: 14px;
+        font-family: sans-serif;
+    }
+
+
+
+
+
+
+    #container form button{
+        margin-top: 5px;
+        width: 100%;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        background-color: rgb(23, 5, 73);
+        color: white;
+        font-size: 20px;
+    }
+
+    #completeMessage{
+        position: absolute;
+        right: calc(100% - 1300px);
+        top: 330px;   
+        width: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+        display: none;
+    }
+    #completeMessage img{
+        display: block;
+        width: 100px;
+        height: 100px;
+    }
+    #completeMessage h1{
+        font-family: monospace;
+        font-size: 30px;
+    }
+    #completeMessage p{
+        font-size: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #completeMessage button{
+        width: 80%;
+        height: 50px;
+        border: none;
+        border-radius: 5px;
+        background-color: rebeccapurple;
+        font-size: 20px;
+        color: white;
+    }
+
+    @media screen and (max-width:475px) {
+        body{
+            width: 100%;
+            background-image: url(./images/bg-main-mobile.png);
+            background-size: 100% 250px;
+            
+        }
+        #card1 {
+            left: 20px;
+            top: 150px;
+            z-index: 100;
+            }
+        .onthesame{
+            width: 300px;
+        }   
+        #cardBack{
+            width: 350px;
+            height:200px;
+            left: 50px;
+            top: 10px;
+        }
+       #container form{
+        width: 100%;
+        left: 0;
+        top: 400px;
+        padding: 30px;
+       }
+
+       #completeMessage{
+        width: 100%;
+        left: 0;
+        top: 400px;
+       }
+    }
